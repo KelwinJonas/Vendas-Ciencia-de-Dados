@@ -347,7 +347,6 @@ def graficoL():
         #Lista de anos da loja da iteração
         grupoAnos = sorted(list(set(busca.loc[lojas_set[k]].index.get_level_values(0).tolist())))
         for i in range(0, len(grupoAnos)):
-            grupo[grupoAnos[i]].plot.bar(rot=0)
             valores_grupo = grupo[grupoAnos[i]].values
             vendedores = grupo[grupoAnos[i]].index.get_level_values(0).tolist()
             #Plot do gráfico
